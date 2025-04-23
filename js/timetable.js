@@ -43,8 +43,8 @@ $(function () {
 
     var template = $('#template').html();
     Mustache.parse(template);
-    var rendered1 = Mustache.render(template, { table: DayTable1, header: "5/18 (土)" });
-    var rendered2 = Mustache.render(template, { table: DayTable2, header: "5/19 (日)" });
+    var rendered1 = Mustache.render(template, { table: DayTable1, header: "5/24 (土)" });
+    var rendered2 = Mustache.render(template, { table: DayTable2, header: "5/25 (日)" });
     // var rendered3  = Mustache.render(template, {table: DayTable3,  header: "11/20 (日)"});
     // $('.article-headline').html(rendered1 + "<br />" + rendered2 + "<br />" + rendered3);
     $('.article-headline').html(rendered1 + "<br />" + rendered2);
