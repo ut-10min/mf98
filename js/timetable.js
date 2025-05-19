@@ -49,17 +49,37 @@ function construstTimeTable(timeTable, talksData) {
                     major: "学際情報学府学際情報学専攻"
                 };
             }
-
-            // 通常講演者
+            
             else {
+                if (!talk) {
+                  console.warn("一致しない講演者名: " + name);
+                  return {
+                    time: time,
+                    name: name,  // fallback 表示
+                    title: "(未登録)",
+                    major: ""
+                  };
+                }
+              
+                return {
+                  time: time,
+                  name: talk.name,
+                  title: talk.title,
+                  major: talk.affiliation
+                };
+              }
+            
+            // 通常講演者
+            /*else {
                 return {
                     time: time,
                     name: talk.name,
                     title: talk.title,
                     major: talk.affiliation
                 };
-            }
+            }    */
         });
+
 }
 
 $(function () {
